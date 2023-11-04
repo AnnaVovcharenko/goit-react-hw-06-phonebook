@@ -16,6 +16,7 @@ export const App = () => {
 ]);
   const [filter, setFilter] = useState('');
 
+  
 const addContact = data => {
   const identContactName = contacts.some(
     ({ name }) =>  data.name === name
