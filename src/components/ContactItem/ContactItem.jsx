@@ -8,12 +8,11 @@ import {
   ContactNumber,
   ContactDelete,
 } from './ContactItem.styled';
-import { getVisibleContacts } from "../redux/selectors";
-import {  useSelector } from 'react-redux';
 
 
-export const ContactItem = () => {
-  const contact = useSelector(getVisibleContacts);
+
+export const ContactItem = ({contact}) => {
+  
   const dispatch = useDispatch();
   return (
     <ItemEl>
