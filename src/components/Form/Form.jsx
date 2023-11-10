@@ -10,6 +10,8 @@ import {
   ButtonForm,
   ErrorMsg
 } from './Form.styled';
+import { addContact } from "../redux/contactsSilce";
+import { useDispatch } from 'react-redux';
 
 const formSchema = Yup.object().shape({
   name: Yup.string()
@@ -21,7 +23,8 @@ const formSchema = Yup.object().shape({
     .required('This field is required, please fill that'),
 });
 
-const FormContact = ({ onAdd }) => {
+const FormContact = () => {
+  const dispatch = useDispatch();
   return (
     <Formik
       initialValues={{
@@ -29,8 +32,8 @@ const FormContact = ({ onAdd }) => {
         number: '',
       }}
       validationSchema={formSchema}
-      onSubmit={(values, actions) => {
-        onAdd(values);
+      onSubmit={(contact, actions) => {
+        dispatch(addContact({ contact }));
         actions.resetForm();
       }}
     >
