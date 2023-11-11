@@ -1,5 +1,5 @@
 import React from 'react';
-import { delContact } from '../redux/contactsSilce';
+import { delContact } from '../../redux/contactsSilce';
 import { useDispatch } from 'react-redux';
 import {
   ItemEl,

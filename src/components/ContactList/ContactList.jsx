@@ -1,10 +1,10 @@
 import { ContactItem } from '../ContactItem/ContactItem';
 import { ListUl, ListDiv } from './ContactList.styled';
 import {  useSelector } from 'react-redux';
-import { getVisibleContacts } from "../redux/selectors";
+import { getContacts } from "../../redux/selectors";
 
 const ContactList = () => {
-  const contacts = useSelector(getVisibleContacts);
+  const contacts = useSelector(getContacts);
   return (
     <ListDiv>
       <ListUl>
