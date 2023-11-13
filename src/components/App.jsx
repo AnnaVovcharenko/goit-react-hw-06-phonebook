@@ -13,7 +13,7 @@ export const App = () => {
       <h2>Phonebook</h2>
       <FormContact/>
       <Filter/>
-      {contacts?.length > 0 && <ContactList/>}
+      {contacts.length !== 0 && <ContactList/>}
     </Section>
       );
 };

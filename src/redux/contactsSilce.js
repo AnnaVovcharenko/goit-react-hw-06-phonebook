@@ -13,27 +13,10 @@ export const contactsSlice = createSlice({
     reducers: {
         addContact(state, action) {
             state.push(action.payload);
-            // state.contacts=[... state.concats, actions.payload]
-            // const identContactName = state.some(
-            //     ({ name }) => actions.payload.contact.name === name
-            // );
-
-            // if (identContactName) {
-            //     alert(`${actions.payload.contact.name} is already in contacts`,
-            //         'ok');
-            //     return;
-            // }
-            // state.push({
-            //     //  id: nanoid(),
-            //     name: actions.payload.contact.name,
-            //     number: actions.payload.contact.number,
-
-            // });
-
         },
         delContact: (state, action) => {
             const index = state.findIndex(
-                contact => contact.id === action.payload);
+             contact => contact.id === action.payload);
             state.splice(index, 1);
         },
 
