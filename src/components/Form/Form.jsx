@@ -12,7 +12,7 @@ import {
 } from './Form.styled';
 import { addContact } from '../../redux/contactsSilce';
 import { useDispatch } from 'react-redux';
-import { createSlice, nanoid } from '@reduxjs/toolkit';
+import {  nanoid } from '@reduxjs/toolkit';
 
 const formSchema = Yup.object().shape({
   name: Yup.string()
