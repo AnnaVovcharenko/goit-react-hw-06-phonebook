@@ -1,5 +1,3 @@
-
-
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 const contactsPhone = [
     { id: nanoid(), name: 'Rosie Simpson', number: '459-12-56' },
