@@ -9,8 +9,6 @@ import {
   ContactDelete,
 } from './ContactItem.styled';
 
-
-
 export const ContactItem = ({contact}) => {
   
   const dispatch = useDispatch();
